@@ -39,7 +39,7 @@ const renderPage = (req, res) => {
   const meta = `
     <link rel="manifest" href="/manifest.json">
           
-    <meta name="apple-mobile-web-app-title" content="SmallWins">
+    <meta name="apple-mobile-web-app-title" content="name">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image" href="${S3_BUCKET_URL}icons/launch.png">
 

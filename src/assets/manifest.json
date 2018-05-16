@@ -1,6 +1,6 @@
 {
-  "name": "SmallWins",
-  "short_name": "SmallWins",
+  "name": "name",
+  "short_name": "name",
   "theme_color": "#0082f9",
   "background_color": "#ffffff",
   "display": "standalone",

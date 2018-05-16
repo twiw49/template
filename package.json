@@ -1,7 +1,7 @@
 {
-  "name": "smallwins",
+  "name": "",
   "version": "1.0.0",
-  "description": "Small Wins",
+  "description": "",
   "main": "",
   "scripts": {
     "build": "NODE_ENV=development webpack --watch --mode development",
@@ -9,14 +9,14 @@
     "build:prod": "NODE_ENV=production webpack --mode production && node ./src/sw/writeServiceWorker",
     "serve": "nodemon dist/lambda.js",
     "start": "concurrently \"yarn serve\" \"yarn build\"",
-    "s3-sync": "aws s3 sync ./dist/public/ s3://smallwins --delete",
+    "s3-sync": "aws s3 sync ./dist/public/ s3://[YOUR S3_BUCKET_NAME] --delete",
     "git": "git add . && git commit -m \"for deploy\"",
     "deploy": "yarn build:prod && yarn git && yarn s3-sync && sls deploy",
     "logs": "sls logs -f lambda"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phodal/smallwins.git"
+    "url": "git+https://github.com/twiw49/serverless-react-server-side-render.git"
   },
   "keywords": [
     "React",
@@ -31,7 +31,7 @@
   "author": "Choi <twiw49@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/twiw49/smallwins/issues"
+    "url": "https://github.com/twiw49/serverless-react-server-side-render/issues"
   },
   "homepage": "",
   "dependencies": {

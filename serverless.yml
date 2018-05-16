@@ -1,4 +1,4 @@
-service: smallwins-project
+service: your-project-name
 
 provider:
   name: aws
