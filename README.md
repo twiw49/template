@@ -120,6 +120,7 @@ yarn start
 
 ## S3 BUCKET URL & S3 BUCEKT NAME
 
+* If you created a S3 Bucket, you get your S3 BUCKET URL and S3 BUCKET NAME.
 * For example,
 
 ```
@@ -135,6 +136,7 @@ https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
 ## Create `.env` file in the root.
 
 * In `.env` file,
+* See, `.env-sample` file. (Sample)
 
 ```
 S3_BUCKET_URL=[YOUR S3_BUCKET_URL]
