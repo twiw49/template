@@ -43,8 +43,6 @@ const renderPage = (req, res) => {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image" href="${S3_BUCKET_URL}icons/launch.png">
 
-    <link rel="shortcut icon" href="${S3_BUCKET_URL}icons/favicon.ico">
-
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="${S3_BUCKET_URL}icons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="${S3_BUCKET_URL}icons/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="${S3_BUCKET_URL}icons/apple-touch-icon-72x72.png">
