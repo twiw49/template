@@ -42,7 +42,7 @@ const LandingPage = props => {
     <Container>
       <Image />
       <Button onClick={() => dispatch({ type: "LOGIN" })}>LOGIN</Button>
-      <Title>Hello, Welcome!</Title>
+      <Title>Hello, Welcome!!</Title>
     </Container>
   );
 };

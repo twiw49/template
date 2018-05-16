@@ -42,7 +42,7 @@ const Home = props => {
     <Container>
       <Image />
       <Button onClick={() => dispatch({ type: "LOGOUT" })}>LOGOUT</Button>
-      <Title>See You Soon!</Title>
+      <Title>See You Soon!!</Title>
     </Container>
   );
 };
