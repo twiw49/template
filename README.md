@@ -73,7 +73,7 @@ yarn start
 
 **Serverless gives us endpoint URL. But the root path of that URL isn't `/`. In this project, the root path is `/dev`.**
 
-* If you go to the endpoint URL, Progressive Web App doesnt' work well. You should have other domain of which root path is `/`.
+* If you go to the endpoint URL, it doesn't work well. You should have other domain of which root path is `/`.
 * You can register your own domain in `aws.amazon.com => API Gateway => Custom Domain Name`.
 * https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html
 
