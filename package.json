@@ -11,7 +11,7 @@
     "start": "concurrently \"yarn serve\" \"yarn build\"",
     "s3-sync": "aws s3 sync ./dist/public/ s3://smallwins --delete",
     "git": "git add . && git commit -m \"for deploy\"",
-    "deploy": "yarn build:prod && yarn s3-sync && sls deploy",
+    "deploy": "yarn build:prod && yarn git && yarn s3-sync && sls deploy",
     "logs": "sls logs -f lambda"
   },
   "repository": {
