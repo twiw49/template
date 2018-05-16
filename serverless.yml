@@ -1,0 +1,14 @@
+service: smallwins-project
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: ap-northeast-2
+
+functions:
+  lambda:
+    handler: dist/lambda.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

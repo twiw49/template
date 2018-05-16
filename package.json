@@ -1,0 +1,75 @@
+{
+  "name": "smallwins",
+  "version": "1.0.0",
+  "description": "Small Wins",
+  "main": "",
+  "scripts": {
+    "build": "NODE_ENV=development webpack --watch --mode development",
+    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production && node ./src/sw/writeServiceWorker",
+    "serve": "nodemon dist/lambda.js",
+    "start": "concurrently \"yarn serve\" \"yarn build\"",
+    "s3-sync": "aws s3 sync ./dist/public/ s3://smallwins --delete",
+    "git": "git add . && git commit -m \"for deploy\"",
+    "deploy": "yarn build:prod && yarn s3-sync && sls deploy",
+    "logs": "sls logs -f lambda"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phodal/smallwins.git"
+  },
+  "keywords": [
+    "React",
+    "Serverless",
+    "Server Side Rendering",
+    "Progressive Web App",
+    "Styled-components",
+    "SLS",
+    "SSR",
+    "PWA"
+  ],
+  "author": "Choi <twiw49@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twiw49/smallwins/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "aws-serverless-express": "^3.0.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "helmet": "^3.12.0",
+    "morgan": "^1.9.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.6",
+    "request": "^2.85.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.5.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "file-loader": "^1.1.11",
+    "image-webpack-loader": "^4.2.0",
+    "random-id": "^0.0.2",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-manifest-plugin": "^2.0.2",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
