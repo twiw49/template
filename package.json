@@ -9,7 +9,7 @@
     "build:prod": "NODE_ENV=production webpack --mode production && node ./src/sw/writeServiceWorker",
     "serve": "nodemon dist/lambda.js",
     "start": "concurrently \"yarn serve\" \"yarn build\"",
-    "s3-sync": "aws s3 sync ./dist/public/ s3://[YOUR S3_BUCKET_NAME] --delete",
+    "s3-sync": "aws s3 sync ./dist/public/ s3://[*****YOUR S3_BUCKET_NAME*****] --delete",
     "git": "git add . && git commit -m \"for deploy\"",
     "deploy": "yarn build:prod && yarn git && yarn s3-sync && sls deploy",
     "logs": "sls logs -f lambda"
@@ -67,8 +67,8 @@
     "image-webpack-loader": "^4.2.0",
     "random-id": "^0.0.2",
     "url-loader": "^1.0.1",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.2",
     "webpack-node-externals": "^1.6.0"
   }
