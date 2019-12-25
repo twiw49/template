@@ -43,7 +43,7 @@ aws configure
 * In terminal,
 
 ```
-serverless install --name [NAME] --url https://github.com/twiw49/serverless-react-server-side-render/
+serverless install --name [NAME] --url https://github.com/twiw49/template/
 ```
 
 ---
