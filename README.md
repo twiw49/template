@@ -157,3 +157,6 @@ S3_BUCKET_URL=[*****YOUR S3_BUCKET_URL*****]
 ```
 yarn deploy
 ```
+
+
+## Route 53 => certificate manager => Api gateway
