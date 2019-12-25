@@ -39,17 +39,17 @@ aws configure
 
 ## Install App
 
-* Project name you want => `[NAME]`
+* Project name you want => `[*****NAME*****]`
 * In terminal,
 
 ```
-serverless install --name [NAME] --url https://github.com/twiw49/template/
+serverless install --name [*****NAME*****] --url https://github.com/twiw49/template/
 ```
 
 ---
 
 ```
-cd [NAME]
+cd [*****NAME*****]
 git init
 yarn
 ```
@@ -93,7 +93,7 @@ yarn start
             "Effect": "Allow",
             "Principal": "*",
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::[Your Bucket Name]/*"
+            "Resource": "arn:aws:s3:::[*****Your Bucket Name*****]/*"
         }
     ]
 }
@@ -129,7 +129,7 @@ https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
 
 * S3_BUKCET_URL=https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
 * S3_BUCEKT_NAME=my-bucket-sample
-  **Create Your Own S3 Bucket in AWS**
+**Create Your Own S3 Bucket in AWS**
 
 ---
 
@@ -139,7 +139,7 @@ https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
 * See, `.env-sample` file. (Sample)
 
 ```
-S3_BUCKET_URL=[YOUR S3_BUCKET_URL]
+S3_BUCKET_URL=[*****YOUR S3_BUCKET_URL*****]
 ```
 
 ---
@@ -147,7 +147,7 @@ S3_BUCKET_URL=[YOUR S3_BUCKET_URL]
 ## Put your S3_BUCKET_NAME at package.json:12
 
 ```
-"s3-sync": "aws s3 sync ./dist/public/ s3://[YOUR S3_BUCKET_NAME] --delete",
+"s3-sync": "aws s3 sync ./dist/public/ s3://[*****YOUR S3_BUCKET_NAME*****] --delete",
 ```
 
 ---
