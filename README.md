@@ -159,4 +159,4 @@ yarn deploy
 ```
 
 
-## Route 53 => certificate manager => Api gateway
+## Route 53 => certificate manager(us-east-1) => Api gateway(cumstom domain names) => Route 53 (create record)
