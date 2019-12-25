@@ -1,6 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 
 const clientConfig = {
@@ -44,7 +44,7 @@ const clientConfig = {
       }
     ]
   },
-  plugins: [new ManifestPlugin({ fileName: "manifest-asset.json" }), new CleanWebpackPlugin(["dist"])],
+  plugins: [new ManifestPlugin({ fileName: "manifest-asset.json" }), new CleanWebpackPlugin()],
   resolve: {
     extensions: [".js", ".jsx"]
   }
