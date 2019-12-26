@@ -14,10 +14,6 @@
     "deploy": "yarn build:prod && yarn git && yarn s3-sync && sls deploy",
     "logs": "sls logs -f lambda"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/twiw49/serverless-react-server-side-render.git"
-  },
   "keywords": [
     "React",
     "Serverless",
@@ -30,11 +26,8 @@
   ],
   "author": "Choi <twiw49@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/twiw49/serverless-react-server-side-render/issues"
-  },
   "homepage": "",
-"dependencies": {
+  "dependencies": {
     "aws-serverless-express": "^3.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.16.2",

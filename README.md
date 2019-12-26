@@ -1,11 +1,11 @@
 # React with..
 
-* Serverless
-* Server Side Rendering
-* Progressive Web App
-* Styled-components
-* Webpack
-* Redux
+- Serverless
+- Server Side Rendering
+- Progressive Web App
+- Styled-components
+- Webpack
+- Redux
 
 ---
 
@@ -21,15 +21,15 @@ yarn add -g aws serverless
 
 `AdministratorAccess` will be enough.
 
-* You get
-  * AWS Access Key ID
-  * AWS Secret Access Key
+- You get
+  - AWS Access Key ID
+  - AWS Secret Access Key
 
 ---
 
 ## AWS configuration
 
-* In terminal,
+- In terminal,
 
 ```
 aws configure
@@ -39,8 +39,8 @@ aws configure
 
 ## Install App
 
-* Project name you want => `[*****NAME*****]`
-* In terminal,
+- Project name you want => `[*****NAME*****]`
+- In terminal,
 
 ```
 serverless install --name [*****NAME*****] --url https://github.com/twiw49/template/
@@ -60,10 +60,9 @@ yarn
 
 **Progressive Web App is working only in `production` mode, not `development` mode.**
 
-* In terminal,
+- In terminal,
 
 ```
-yarn build:dev
 yarn start
 ```
 
@@ -73,16 +72,16 @@ yarn start
 
 **Serverless gives us endpoint URL. But the root path of that URL isn't `/`. In this project, the root path is `/dev`.**
 
-* If you go to the endpoint URL, it doesn't work well. You should have other domain of which root path is `/`.
-* You can register your own domain in `aws.amazon.com => API Gateway => Custom Domain Name`.
-* https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html
+- If you go to the endpoint URL, it doesn't work well. You should have other domain of which root path is `/`.
+- You can register your own domain in `aws.amazon.com => API Gateway => Custom Domain Name`.
+- https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-edge-optimized-custom-domain-name.html
 
 ---
 
 ## AWS S3
 
-* Create S3 Bucket
-* `Permissions - Bucket Policy`
+- Create S3 Bucket
+- `Permissions - Bucket Policy`
 
 ```
 {
@@ -99,7 +98,7 @@ yarn start
 }
 ```
 
-* `Permissions - CORS configurations`
+- `Permissions - CORS configurations`
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -120,23 +119,23 @@ yarn start
 
 ## S3 BUCKET URL & S3 BUCEKT NAME
 
-* If you created a S3 Bucket, you get your S3 BUCKET URL and S3 BUCKET NAME.
-* For example,
+- If you created a S3 Bucket, you get your S3 BUCKET URL and S3 BUCKET NAME.
+- For example,
 
 ```
 https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
 ```
 
-* S3_BUKCET_URL=https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
-* S3_BUCEKT_NAME=my-bucket-sample
-**Create Your Own S3 Bucket in AWS**
+- S3_BUKCET_URL=https://s3.ap-northeast-2.amazonaws.com/my-bucket-sample/
+- S3_BUCEKT_NAME=my-bucket-sample
+  **Create Your Own S3 Bucket in AWS**
 
 ---
 
 ## Create `.env` file in the root.
 
-* In `.env` file,
-* See, `.env-sample` file. (Sample)
+- In `.env` file,
+- See, `.env-sample` file. (Sample)
 
 ```
 S3_BUCKET_URL=[*****YOUR S3_BUCKET_URL*****]
@@ -152,11 +151,10 @@ S3_BUCKET_URL=[*****YOUR S3_BUCKET_URL*****]
 
 ---
 
-* In terminal,
+- In terminal,
 
 ```
 yarn deploy
 ```
-
 
 ## Route 53 => certificate manager(us-east-1) => Api gateway(cumstom domain names) => Route 53 (create record)
